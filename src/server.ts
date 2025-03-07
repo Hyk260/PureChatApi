@@ -1,5 +1,5 @@
 import './utils/env-loader'
-import express, { Request, Response, NextFunction } from 'express';
+import express, { Request, Response, NextFunction, Application  } from 'express';
 import path from 'node:path';
 import cors from 'cors';
 import bodyParser from "body-parser";
@@ -50,7 +50,7 @@ async function constructServer() {
   return app;
 }
 
-async function serveNcmApi(options: ServerOptions) {
+export async function serveNcmApi(options: ServerOptions): Promise<Application> {
   console.log("config", configuration());
   const port = Number(options.port || process.env.PORT);
   const host = options.host || process.env.HOST || "localhost";
@@ -63,9 +63,4 @@ async function serveNcmApi(options: ServerOptions) {
 
   return appExt;
 }
-
-serveNcmApi({
-  port: 8081,
-  host: '',
-})
 

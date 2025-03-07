@@ -13,7 +13,7 @@
     "NODE_ENV": "development",
     "TS_NODE_TRANSPILE_ONLY": "true"
   },
-  "exec": "tsx src/server.ts",
+  "exec": "tsx src/app.ts",
   "ext": "ts,js,json",
   "execMap": {
     "ts": "tsx"

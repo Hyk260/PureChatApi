@@ -3,6 +3,7 @@ import market from '../db/market.json';
 import { login } from "../api/main/login";
 import { authorize, callback } from "./auth";
 import { plugin } from './plugin';
+import { imCallback } from '../api/imCallback';
 import { restApi } from "../api/rest-api";
 
 const router: express.Router = express.Router();
@@ -16,7 +17,8 @@ router.get("/market", (req, res) => {
 });
 
 router.post("/webapi/plugin/:apiName", plugin)
-
+// im 回调
+router.post("/imCallback", imCallback)
 /* POST 登录 */
 router.post("/login", login);
 /* POST im rest-api */

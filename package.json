@@ -5,7 +5,7 @@
   "description": "PureChat Server api",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon",
-    "start": "cross-env NODE_ENV=production tsx src/server.ts",
+    "start": "cross-env NODE_ENV=production tsx src/app.ts",
     "build": "tsc --project tsconfig.json && node scripts/copy-assets.mjs",
     "server": "cross-env NODE_ENV=production node index.js",
     "type-check": "tsc --noEmit",
