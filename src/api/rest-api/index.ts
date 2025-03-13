@@ -52,7 +52,7 @@ export const accountImport = async (params: AccountImportParams): Promise<boolea
 // 单发单聊消息
 // https://cloud.tencent.com/document/product/269/2282
 export const restSendMsg = async (params: any) => {
-  const { From_Account, To_Account, Text } = params;
+  const { From_Account, To_Account, Text, CloudCustomData } = params;
   const result: Result = await http.request({
     url: "v4/openim/sendmsg",
     method: "post",
@@ -61,6 +61,7 @@ export const restSendMsg = async (params: any) => {
       From_Account,
       To_Account,
       // MsgSeq: "",
+      CloudCustomData: CloudCustomData || "",
       MsgRandom: generateRandomInt32(),
       ForbidCallbackControl: [
         "ForbidBeforeSendMsgCallback",
