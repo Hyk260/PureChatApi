@@ -12,7 +12,8 @@
       "dest": "/"
     }
   ],
-  "installCommand": "npm install --no-package-lock",
+  "installCommand": "npm install",
   "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "nodeVersion": "22.x"
 }
