@@ -20,8 +20,6 @@ export const configuration = () => {
     region: "ap-beijing", // 存储桶所在地域
     secretId: process.env.SecretId,
     secretKey: process.env.SecretKey,
-    // chatgpt
-    openaiApiKey: process.env.OPENAI_API_KEY,
     options: {
       dataBaseMode: process.env.DATA_BASE_MODE || 'cloudRedis' // lowdb localRedis cloudRedis
     },
@@ -81,8 +79,6 @@ export default {
   region: "ap-beijing", // 存储桶所在地域
   secretId: process.env.SecretId,
   secretKey: process.env.SecretKey,
-  // chatgpt
-  openaiApiKey: process.env.OPENAI_API_KEY,
   options: {
     dataBaseMode: process.env.DATA_BASE_MODE || 'cloudRedis' // lowdb localRedis cloudRedis
   },

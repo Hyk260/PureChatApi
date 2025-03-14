@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require("./dist/server")
+require("./dist/app")
