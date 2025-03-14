@@ -58,7 +58,6 @@
   "engines": {
     "node": "^18.20.0 || >=20.0.0"
   },
-  "packageManager": "pnpm@9.7.1",
   "keywords": [
     "openai",
     "ai",
